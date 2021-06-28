@@ -7,7 +7,7 @@ import AppLoading from 'expo-app-loading';
 import {
   StatusBar
 } from 'react-native';
-import { SignIn } from './src/screens/SignIn';
+import { Routes } from './src/routes';
 import { Bakground } from './src/components/Background';
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <SignIn />
+      <Routes />
     </Bakground>
   )
 }
