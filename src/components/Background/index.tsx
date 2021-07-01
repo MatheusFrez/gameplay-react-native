@@ -7,7 +7,7 @@ type Props = {
    children: ReactNode;
 }
 
-export function Bakground({ children }: Props) {
+export function Background({ children }: Props) {
    const { secondary80, secondary100 } = theme.colors;
    return (
       <LinearGradient

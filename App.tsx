@@ -8,7 +8,7 @@ import {
   StatusBar
 } from 'react-native';
 import { Routes } from './src/routes';
-import { Bakground } from './src/components/Background';
+import { Background } from './src/components/Background';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,13 +23,13 @@ export default function App() {
   } // deixa a tela de splash enquanto as fontes do aplicativo não são carregadas
 
   return (
-    <Bakground>
+    <Background>
       <StatusBar
-        barStyle="light-content" 
+        barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
       <Routes />
-    </Bakground>
+    </Background>
   )
 }
