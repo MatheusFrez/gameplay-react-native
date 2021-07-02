@@ -3,24 +3,26 @@ import { useFonts } from 'expo-font';
 import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
 
+import { AuthProvider } from './src/hooks/auth';
+
 import AppLoading from 'expo-app-loading';
-import {
-  StatusBar
-} from 'react-native';
+import { StatusBar, LogBox } from 'react-native';
 import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
 
-export default function App() {
-  const [fontsLoaded] = useFonts({
-    Inter_400Regular,
-    Inter_500Medium,
-    Rajdhani_500Medium,
-    Rajdhani_700Bold
-  });
+LogBox.ignoreLogs(['You are not currently signed in to Expo on your development machine.']);
 
-  if(!fontsLoaded) {
-    return <AppLoading /> //componente que segura a tela de splash
-  } // deixa a tela de splash enquanto as fontes do aplicativo não são carregadas
+export default function App() {
+   const [fontsLoaded] = useFonts({
+      Inter_400Regular,
+      Inter_500Medium,
+      Rajdhani_500Medium,
+      Rajdhani_700Bold
+   });
+
+   if(!fontsLoaded) {
+      return <AppLoading /> //componente que segura a tela de splash
+   } // deixa a tela de splash enquanto as fontes do aplicativo não são carregadas
 
   return (
     <Background>
@@ -29,7 +31,9 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <Routes />
+      <AuthProvider>
+         <Routes />
+      </AuthProvider>
     </Background>
   )
 }
