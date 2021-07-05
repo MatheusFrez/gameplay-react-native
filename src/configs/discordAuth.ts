@@ -1,9 +1,8 @@
-const REDIRECT_URI = 'https://auth.expo.io/@anonymous/gameplay-ccfd11ab-261e-45e9-bd05-056b9249a018';
-const SCOPE = 'identify%20email%20connections%20guilds';
-const RESPONSE_TYPE = 'token';
-const CLIENT_ID = '860283542943957002';
-const CDN_IMAGE = 'https://cdn.discordapp.com';
-
+const REDIRECT_URI = process.env.REDIRECT_URI;
+const SCOPE = process.env.SCOPE;
+const RESPONSE_TYPE = process.env.RESPONSE_TYPE;
+const CLIENT_ID = process.env.CLIENT_ID;
+const CDN_IMAGE = process.env.CDN_IMAGE;
 
 export {
    REDIRECT_URI,
