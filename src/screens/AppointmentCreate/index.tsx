@@ -192,6 +192,7 @@ export function AppointmentCreate() {
                   <TextArea
                      multiline
                      maxLength={100}
+                     minLength={4}
                      numberOfLines={5}
                      autoCorrect={false}
                      onChangeText={setDescription}

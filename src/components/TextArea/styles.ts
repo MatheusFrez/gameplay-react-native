@@ -16,5 +16,13 @@ export const styles = StyleSheet.create({
       paddingHorizontal: 16,
       paddingTop: 16,
       textAlignVertical: 'top'
+   },
+   errorMessage: {
+      flex: 1,
+      color: theme.colors.error,
+      paddingHorizontal: 8,
+      marginTop: 2,
+      fontSize: 10,
+      fontFamily: theme.fonts.text400
    }
 });
